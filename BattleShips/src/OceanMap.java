@@ -17,11 +17,15 @@ public class OceanMap {
 		for (int i = 0; i < map.length; i++) {
 			System.out.printf("%d |", i);
 			for (int j = 0; j < map[0].length; j++) {
-				if (map[i][j] != '2')
+				if (map[i][j] == '2' || map[i][j] == '*'){
+					System.out.print(" ");
+				}
+				else{
 					System.out.print(map[i][j]);
+				}
 			}
-			System.out.printf("| %d", i);
-			System.out.println();
+			System.out.printf("| %d\n", i);
+			
 			
 		}
 		System.out.println("   0123456789   ");
@@ -43,7 +47,6 @@ public class OceanMap {
 		}else
 			return false;
 		}catch (Exception e){
-			System.out.println(e);
 			return false;
 		}
 	}
